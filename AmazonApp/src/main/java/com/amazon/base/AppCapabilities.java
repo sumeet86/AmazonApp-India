@@ -17,16 +17,16 @@ public class AppCapabilities {
 	public static String appPackage = "in.amazon.mShop.android.shopping";
 	public static String appActivity = "com.amazon.mShop.home.HomeActivity";
 
-	public static AndroidDriver<AndroidElement> driver;
+	public AndroidDriver<AndroidElement> driver;
 
 	/* public static void main(String[] args) throws MalformedURLException {
 		Capabilities(deviceName,platformVersion,model,appPackage,appActivity);
 		
 	} */
 	
-	@Test
-	public static AndroidDriver<AndroidElement> Capabilities(String deviceName, String platformVersion, String model,
-			String appPackage, String appActivity) throws MalformedURLException {
+	//String deviceName, String platformVersion, String model,String appPackage, String appActivity
+	
+	public static AndroidDriver<AndroidElement> Capabilities() throws MalformedURLException {
 
 		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setCapability(CapabilityType.BROWSER_NAME, "");
