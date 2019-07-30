@@ -13,7 +13,7 @@ import io.appium.java_client.android.AndroidKeyCode;
 
 
 public class Launch extends AppCapabilities {
-  public AndroidDriver<AndroidElement> driver;
+  
 		
 	@Test(priority=1)
 	public void AppLaunch() throws MalformedURLException {
