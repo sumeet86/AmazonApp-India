@@ -2,23 +2,27 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18576" started-at="2019-08-02T05:39:20Z" finished-at="2019-08-02T05:39:38Z">
+  <suite name="Default suite" duration-ms="68043" started-at="2019-08-02T05:46:35Z" finished-at="2019-08-02T05:47:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18576" started-at="2019-08-02T05:39:20Z" finished-at="2019-08-02T05:39:38Z">
+    <test name="Default test" duration-ms="68043" started-at="2019-08-02T05:46:35Z" finished-at="2019-08-02T05:47:43Z">
       <class name="com.amazon.testcase.Launch">
-        <test-method status="PASS" signature="Capabilities()[pri:0, instance:com.amazon.testcase.Launch@210366b4]" name="Capabilities" is-config="true" duration-ms="12913" started-at="2019-08-02T05:39:20Z" finished-at="2019-08-02T05:39:33Z">
+        <test-method status="PASS" signature="Capabilities()[pri:0, instance:com.amazon.testcase.Launch@6ddf90b0]" name="Capabilities" is-config="true" duration-ms="58779" started-at="2019-08-02T05:46:35Z" finished-at="2019-08-02T05:47:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Capabilities -->
-        <test-method status="PASS" signature="AppLaunch()[pri:1, instance:com.amazon.testcase.Launch@210366b4]" name="AppLaunch" duration-ms="2477" started-at="2019-08-02T05:39:33Z" finished-at="2019-08-02T05:39:35Z">
+        <test-method status="PASS" signature="AppLaunch()[pri:1, instance:com.amazon.testcase.Launch@6ddf90b0]" name="AppLaunch" duration-ms="5724" started-at="2019-08-02T05:47:33Z" finished-at="2019-08-02T05:47:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AppLaunch -->
-        <test-method status="PASS" signature="AppExit()[pri:2, instance:com.amazon.testcase.Launch@210366b4]" name="AppExit" duration-ms="3122" started-at="2019-08-02T05:39:35Z" finished-at="2019-08-02T05:39:38Z">
+        <test-method status="PASS" signature="AppExit()[pri:2, instance:com.amazon.testcase.Launch@6ddf90b0]" name="AppExit" duration-ms="1001" started-at="2019-08-02T05:47:39Z" finished-at="2019-08-02T05:47:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AppExit -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.amazon.testcase.Launch@6ddf90b0]" name="afterClass" is-config="true" duration-ms="2450" started-at="2019-08-02T05:47:40Z" finished-at="2019-08-02T05:47:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
       </class> <!-- com.amazon.testcase.Launch -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
