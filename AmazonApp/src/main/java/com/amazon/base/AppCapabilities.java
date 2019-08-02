@@ -5,6 +5,7 @@ import java.net.URL;
 
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidDriver;
@@ -17,15 +18,9 @@ public class AppCapabilities {
 	public static String appPackage = "in.amazon.mShop.android.shopping";
 	public static String appActivity = "com.amazon.mShop.home.HomeActivity";
 
-	public AndroidDriver<AndroidElement> driver;
+	public static AndroidDriver<AndroidElement> driver;
 
-	/* public static void main(String[] args) throws MalformedURLException {
-		Capabilities(deviceName,platformVersion,model,appPackage,appActivity);
-		
-	} */
-	
-	//String deviceName, String platformVersion, String model,String appPackage, String appActivity
-	
+	 @BeforeClass	
 	public static AndroidDriver<AndroidElement> Capabilities() throws MalformedURLException {
 
 		DesiredCapabilities cap = new DesiredCapabilities();
@@ -38,7 +33,7 @@ public class AppCapabilities {
 		cap.setCapability("fullReset", false);
 		cap.setCapability("appPackage", appPackage);
 		cap.setCapability("appActivity", appActivity);
-		AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+		driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
 		return driver;
 
 	}
