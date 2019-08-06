@@ -18,19 +18,32 @@ public class Launch extends AppCapabilities {
 	} */
 
 	@Test(priority = 1)
-	public void AppLaunch() throws MalformedURLException, InterruptedException {
+	public void AppMenu() throws MalformedURLException, InterruptedException {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		System.out.println("App launched");
 		driver.findElement(By.id("in.amazon.mShop.android.shopping:id/chrome_action_bar_burger_icon")).click();
 		System.out.println("Done");
+		//driver.findElementByAndroidUIAutomator(
+		//		"new UiScrollable(new UiSelector().resourceId(\"in.amazon.mShop.android.shopping:id/gno_drawer_list\")).scrollIntoView(new UiSelector().text(\"Customer Service\"));").click();
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//*[@text='Shop by Category']")).click();
+		Thread.sleep(2000);
+		
+	
 	}
 
-	@SuppressWarnings("deprecation")
+/*	@SuppressWarnings("deprecation")
 	@Test(priority = 2)
 	public void AppExit() {
 		driver.pressKeyCode(AndroidKeyCode.BACK);
 		System.out.println("App Exits");
 
+	} */
+	
+	@Test(priority= 2)
+	public void MobileComputer() throws InterruptedException{
+		 driver.findElement(By.xpath("//*[@text='Mobiles, Computers']")).click();
+		 Thread.sleep(2000);
+		 driver.findElement(By.xpath("//*[@text='Laptops']")).click();
 	}
-
 }

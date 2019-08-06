@@ -5,7 +5,8 @@
     <classes>
       <class name="com.amazon.testcase.Launch">
         <methods>
-          <include name="AppLaunch"/>
+          <include name="MobileComputer"/>
+          <include name="afterClass"/>
           <include name="Capabilities"/>
         </methods>
       </class> <!-- com.amazon.testcase.Launch -->

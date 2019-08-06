@@ -6,7 +6,9 @@ import java.net.URL;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidDriver;
@@ -24,7 +26,7 @@ public class AppCapabilities {
 	public static AndroidDriver<AndroidElement> driver;
 	private static AppiumDriverLocalService service;
 
-	@BeforeClass
+	@BeforeSuite 
 	public static AndroidDriver<AndroidElement> Capabilities() throws MalformedURLException {
 
 		service = AppiumDriverLocalService.buildDefaultService();
@@ -49,7 +51,7 @@ public class AppCapabilities {
 
 	}
 
-	@AfterClass
+	@AfterSuite
 	public static void afterClass() {
 		if (driver != null) {
 			driver.quit();
