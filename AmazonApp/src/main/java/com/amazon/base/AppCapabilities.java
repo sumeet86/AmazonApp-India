@@ -15,6 +15,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServerHasNotBeenStartedLocallyException;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
 
 public class AppCapabilities {
 	public static String deviceName = "Galaxy A50";
@@ -26,10 +27,11 @@ public class AppCapabilities {
 	public static AndroidDriver<AndroidElement> driver;
 	private static AppiumDriverLocalService service;
 
-	@BeforeSuite 
-	public static AndroidDriver<AndroidElement> Capabilities() throws MalformedURLException {
+	@BeforeSuite
+	public static AndroidDriver<AndroidElement> Setup() throws MalformedURLException {
 
-		service = AppiumDriverLocalService.buildDefaultService();
+		
+		service= new AppiumServiceBuilder().usingPort(Integer.valueOf(423)).build();
 		service.start();
 
 		if (service == null || !service.isRunning()) {
@@ -52,7 +54,7 @@ public class AppCapabilities {
 	}
 
 	@AfterSuite
-	public static void afterClass() {
+	public static void TearDown() {
 		if (driver != null) {
 			driver.quit();
 		}

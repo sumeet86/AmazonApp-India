@@ -37,7 +37,6 @@ public class Launch extends AppCapabilities {
 	public void AppExit() {
 		driver.pressKeyCode(AndroidKeyCode.BACK);
 		System.out.println("App Exits");
-
 	} */
 	
 	@Test(priority= 2)
